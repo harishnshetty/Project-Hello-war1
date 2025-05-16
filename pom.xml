@@ -15,37 +15,22 @@
         </dependency>
     </dependencies>
 
-<build>
-  <finalName>my-maven-app</finalName> <!-- Name the output JAR as my-maven-app.jar -->
-
-  <plugins>
-    <!-- Standard JAR plugin to set the main class -->
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-jar-plugin</artifactId>
-      <version>3.2.0</version>
-      <configuration>
-        <archive>
-          <manifest>
-            <mainClass>com.example.App</mainClass>
-          </manifest>
-        </archive>
-      </configuration>
-      <executions>
-        <execution>
-          <id>make-assembly</id>
-          <phase>package</phase>
-          <goals>
-            <goal>single</goal>
-          </goals>
-        </execution>
-      </executions>
-          </plugin>
-  </plugins>
-</build>
-
-
-
-
+    <build>
+        <finalName>my-maven-app</finalName> <!-- Output: target/my-maven-app.jar -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.example.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
