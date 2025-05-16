@@ -1,4 +1,4 @@
-package com.example.App;
+package com.example;
 
 import com.google.gson.Gson;
 
