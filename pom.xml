@@ -16,8 +16,10 @@
     </dependencies>
 
 <build>
+  <finalName>my-maven-app</finalName> <!-- Custom name for your JAR -->
+
   <plugins>
-    <!-- JAR plugin to set the main class -->
+    <!-- JAR plugin -->
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-jar-plugin</artifactId>
@@ -31,7 +33,7 @@
       </configuration>
     </plugin>
 
-    <!-- Assembly plugin to create an executable jar with dependencies -->
+    <!-- Assembly plugin -->
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-assembly-plugin</artifactId>
@@ -42,7 +44,11 @@
             <mainClass>com.example.App</mainClass>
           </manifest>
         </archive>
-              </configuration>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+        <finalName>my-maven-app</finalName> <!-- This sets the custom JAR name -->
+      </configuration>
       <executions>
         <execution>
           <id>make-assembly</id>
@@ -55,6 +61,7 @@
     </plugin>
   </plugins>
 </build>
+
 
 
 
