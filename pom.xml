@@ -42,10 +42,7 @@
             <mainClass>com.example.App</mainClass>
           </manifest>
         </archive>
-        <descriptorRefs>
-          <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-      </configuration>
+              </configuration>
       <executions>
         <execution>
           <id>make-assembly</id>
